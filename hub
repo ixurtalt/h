@@ -175,7 +175,7 @@ UIS=game:GetService('UserInputService')local TS=game:GetService('TweenService')l
 player=Players.LocalPlayer if not player then return end local playerGui=player:WaitForChild('PlayerGui')local env=_G if type(getgenv)=='function'then local ok,result=pcall(getgenv)if
 ok and type(result)=='table'then env=result end end for _,key in ipairs({'__SAE_HubV2_Cleanup','__CheckUITeleportV3_Cleanup','__CheckUITeleportV2_Cleanup'})do if
 type(env[key])=='function'then pcall(env[key]);env[key]=nil end end local old=playerGui:FindFirstChild('StealAnEggHubV2')if old then old:Destroy()end 
-local IXURT_UI_LIBRARY_URL='https://raw.githubusercontent.com/ixurtalt/h/refs/heads/main/Ui'
+local IXURT_UI_LIBRARY_URL='https://raw.githubusercontent.com/Glowxfy/ui-library/refs/heads/main/ui'
 local uiSourceOK,uiSource=pcall(function()return game:HttpGet(IXURT_UI_LIBRARY_URL)end)
 if not uiSourceOK or type(uiSource)~='string' then
  warn('IXURT UI library could not be loaded: '..tostring(uiSource))
